@@ -17,3 +17,9 @@ describe("GET /api/v1/health", () => {
     });
 
 });
+describe("GET /api/v1/health/live", () => {
+    it("Return LIVE status", async () => {
+        const response: Response = await request(app).get("/api/v1/health/live");
+        expect(response.body.status).toBe("LIVE");
+    });
+});
