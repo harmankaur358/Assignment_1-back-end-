@@ -2,7 +2,6 @@
 import request, { Response } from "supertest";
 import app from "../src/app";
 
-// Test
 describe("GET /api/v1/health", () => {
     it("health status should be 200", async () => {
         const response: Response = await request(app).get("/api/v1/health");
