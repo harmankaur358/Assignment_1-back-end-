@@ -1,3 +1,4 @@
+//Import statements
 import request, { Response } from "supertest";
 import app from "../src/app";
 
@@ -17,6 +18,7 @@ describe("GET /api/v1/health", () => {
     });
 
 });
+
 describe("GET /api/v1/health/live", () => {
     it("Return LIVE status", async () => {
         const response: Response = await request(app).get("/api/v1/health/live");

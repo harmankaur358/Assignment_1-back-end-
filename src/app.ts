@@ -1,15 +1,16 @@
+//import Statements
 import express, { Express, Request, Response } from "express";
 import { uptime } from "process";
 
-// Initialize Express application
+// Initialized Express application
 const app: Express = express();
 
-// Define a route
+// Defined a route
 app.get("/", (req: Request, res: Response) => {
     res.send("Hello, World!");
 });
 
-// Created the type
+// Created the interface
 interface HealthResponse {
     status: string;
     uptime: number;
