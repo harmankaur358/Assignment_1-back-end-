@@ -1,12 +1,11 @@
 // Created the interface for portfolioPerformance Calculation
-interface PortfolioPerformance {
+export interface PortfolioPerformance {
     initialInvestment: number;
     currentValue: number;
     profitOrLoss: number;
     percentageChange: number;
     performanceSummary: string;
 }
-
 
 export function calculatePortfolioPerformance(
     initialInvestment: number,
@@ -59,7 +58,7 @@ export function calculatePortfolioPerformance(
         currentValue,
         profitOrLoss,
         percentageChange,
-        performanceSummary: `Lost slightly with a loss of $${Math.abs(profitOrLoss)}.`,
+        performanceSummary: `Lost slightly with a loss of $${Math.abs(profitOrLoss).toFixed(2)}.`,
       };
 
     case percentageChange >= -20:
@@ -68,7 +67,7 @@ export function calculatePortfolioPerformance(
         currentValue,
         profitOrLoss,
         percentageChange,
-        performanceSummary: `Lost moderately with a loss of $${Math.abs(profitOrLoss)}.`,
+        performanceSummary: `Lost moderately with a loss of $${Math.abs(profitOrLoss).toFixed(2)}.`,
       };
 
     default:
@@ -77,7 +76,7 @@ export function calculatePortfolioPerformance(
             currentValue,
             profitOrLoss,
             percentageChange,
-            performanceSummary: `Lost significantly with a loss of $${Math.abs(profitOrLoss)}.`,
+            performanceSummary: `Lost significantly with a loss of $${Math.abs(profitOrLoss).toFixed(2)}.`,
         };
 }
 }
