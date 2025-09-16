@@ -1,5 +1,6 @@
 import {findLargestHolding, calculateAssetAllocation, Asset } from "../src/portfolio/financeFunctions";
 
+// Tests for findlargestholding function
 describe("findLargestHolding", () => {
   it("returns the asset with the highest value", () => {
     const assets: Asset[] = [

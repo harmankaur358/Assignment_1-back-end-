@@ -1,10 +1,11 @@
+//Asset interface
 export interface Asset {
   name: string;
   value: number;
   type: string;
 }
 
-// Find the asset with the highest value
+// Function for finding the asset with the highest value
 export function findLargestHolding(assets: Asset[]): Asset | null {
   if (!assets.length) return null;
   let largest = assets[0];
@@ -14,7 +15,7 @@ export function findLargestHolding(assets: Asset[]): Asset | null {
   return largest;
 }
 
-// Calculate percentage allocation by asset type
+// Function for calculating percentage allocation for each assest
 export function calculateAssetAllocation(assets: Asset[]): {[type: string]: number} {
   const totals: {[type: string]: number} = {};
   let totalValue = 0;

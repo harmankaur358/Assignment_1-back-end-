@@ -7,6 +7,7 @@ export interface PortfolioPerformance {
     performanceSummary: string;
 }
 
+// calculatePortfolioPerformance function
 export function calculatePortfolioPerformance(
     initialInvestment: number,
     currentValue: number): PortfolioPerformance{
